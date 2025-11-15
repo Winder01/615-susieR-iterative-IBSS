@@ -1,10 +1,13 @@
-# app.R
+# app_v20.R
 
 library(shiny)
 library(plotly)
 library(matrixStats)
 library(DT)
 library(susieR)
+
+# Source the simulation file
+source("simulation_v3.R")
 
 # Define UI
 ui <- fluidPage(
@@ -23,6 +26,7 @@ ui <- fluidPage(
                              choices = c("Perfect Collinearity" = "perfect_collinearity",
                                          "Moderate LD" = "moderate_ld",
                                          "Multiple LD Blocks" = "multiple_ld_blocks",
+                                         "Tricky Scenario" = "tricky_scenario",
                                          "Real Dataset (N3finemapping)" = "real_data"))
         ),
         tabPanel("Upload Your Own Data",
@@ -49,7 +53,10 @@ ui <- fluidPage(
       h4("Iteration Control"),
       uiOutput("iteration_slider_ui"),
       actionButton("next_step", "Next Step"),
-      textOutput("iteration_info")
+      textOutput("iteration_info"),
+      hr(),
+      h4("Dataset Description"),
+      htmlOutput("dataset_description")
     ),
 
     mainPanel(
@@ -86,6 +93,7 @@ server <- function(input, output, session) {
                      "perfect_collinearity" = simulate_perfect_collinearity(),
                      "moderate_ld" = simulate_moderate_ld(),
                      "multiple_ld_blocks" = simulate_multiple_ld_blocks(),
+                     "tricky_scenario" = simulate_tricky_scenario(),
                      "real_data" = {
                        data(N3finemapping)
                        list(X = N3finemapping$X, 
@@ -155,6 +163,19 @@ server <- function(input, output, session) {
     }, error = function(e) {
       showNotification(paste("An error occurred during SuSiE analysis:", e$message), type = "error")
     })
+  })
+  
+  output$dataset_description <- renderUI({
+    req(input$data_scenario)
+    
+    desc <- switch(input$data_scenario,
+      "perfect_collinearity" = "A simulation with 500 samples and 1000 variables. Two causal variants (200 and 800) with perfect collinearity (r=1) with two other variants (400 and 600 respectively).",
+      "moderate_ld" = "A simulation with 500 samples and 1000 variables. Two causal variants (100 and 200) in two separate blocks of moderate LD (r=0.6).",
+      "multiple_ld_blocks" = "A simulation with 500 samples and 1000 variables. Three causal variants (50, 150, 250) in three separate blocks with high (r=0.9), moderate (r=0.6), and low (r=0.3) LD.",
+      "tricky_scenario" = "A simulation with 500 samples and 1000 variables. Three weak signals in a 50-variable block of high LD (r=0.95).",
+      "real_data" = "A real dataset from the `susieR` package. It contains genotype data for 574 samples and 1001 variables from chromosome 19. The phenotype is simulated. See `?N3finemapping` for more details."
+    )
+    HTML(desc)
   })
 
   output$iteration_slider_ui <- renderUI({
@@ -275,4 +296,3 @@ server <- function(input, output, session) {
 }
 
 shinyApp(ui = ui, server = server)
-
