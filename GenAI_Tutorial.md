@@ -4,7 +4,7 @@
 
 **Author:** Catherine Yan
 
-**Tools:** RShiny, Plotly, Google Gemini 3 (LLM)
+**Tools:** RShiny, Plotly, Google Gemini 3 & Gemini CLI
 
 ---
 
