@@ -218,17 +218,29 @@ I asked the AI to reorganize the layout, moving parameters to a top configuratio
 **Outcome:**
 I applied the final polish to the application by setting scientifically appropriate default parameters and converting abstract variable indices into physical chromosomal coordinates (Mb) for the plots. Additionally, I transformed the raw statistical output into a formatted, interactive table, making the fine-mapping results immediately interpretable for researchers.
 
-<img width="2560" height="1379" alt="image" src="https://github.com/user-attachments/assets/14105d6f-8dfa-4b72-a0c1-7fe8d3d3daaf" />
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/14105d6f-8dfa-4b72-a0c1-7fe8d3d3daaf" 
+       width="950" 
+       alt="Final SuSiE IBSS result: PIP plot - High Resolution">
+  <br>
+  <em>Figure 5. Final SuSiE IBSS result: PIP plot</em>
+</p>
 
-**Figure 5.** Final SuSiE IBSS result: PIP plot 
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/8fb274f2-29c9-4341-b4b4-3f5b8310b0bc" 
+       width="950" 
+       alt="Final SuSiE IBSS result: Credible Sets Table - High Resolution">
+  <br>
+  <em>Figure 6. Final SuSiE IBSS result: Credible Sets Table</em>
+</p>
 
-<img width="1904" height="1055" alt="image" src="https://github.com/user-attachments/assets/8fb274f2-29c9-4341-b4b4-3f5b8310b0bc" />
-
-**Figure 6.** Final SuSiE IBSS result: Credibe Sets 
-
-<img width="1440" height="1125" alt="image" src="https://github.com/user-attachments/assets/7f8dd15c-f9da-4c44-9202-9b9cc54b1a31" />
-
-**Figure 7.** Final SuSiE IBSS result: Data Vim & log
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/7f8dd15c-f9da-4c44-9202-9b9cc54b1a31" 
+       width="700" 
+       alt="Final SuSiE IBSS result: Data Preview and Analysis Log - High Resolution">
+  <br>
+  <em>Figure 7. Final SuSiE IBSS result: Data Preview and Log</em>
+</p>
 
 ---
 
