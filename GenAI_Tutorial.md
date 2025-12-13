@@ -26,6 +26,7 @@ This tutorial documents the development process of an RShiny application designe
 
 Using Generative AI (Google Gemini CLI & Gemini 3), I transitioned from a basic structure to a performance-optimized tool capable of handling large-scale genomic data (FinnGen). The development process highlights how GenAI handles boilerplate code, diagnoses statistical errors, and optimizes algorithms.
 
+---
 
 ## Phase 1: App Structure establishment (UI & Iterative algorithm)
 **Goal:** Establish the app framework with basic UI, parameters, and plots setups. 
@@ -60,6 +61,7 @@ Instead of writing the UI skeleton manually, I prompted the AI to generate a sid
 ![step1](https://github.com/user-attachments/assets/0b8e91d3-d3af-469d-8d13-d2c187499cef)
 **Figure 1:** The AI-generated framework successfully animating the IBSS iterations.
 
+---
 
 ## Phase 2: Simulating Genetic data
 **Goal:** Verify the visualization using toy example data. 
@@ -92,6 +94,8 @@ I implemented four specific genetic simulation scenarios to rigorously test the 
 ![step2](https://github.com/user-attachments/assets/b00d5bf0-d31f-426b-9166-0c1231a0b023)
 
 **Figure 2.** Visualizing simulated data in 'multiple ld blocks' cases
+
+---
 
 ## Phase 3: The Challenge - Integrating Real-World Data (FinnGen)
 **Problem:** When I attempted to load real Summary Statistics from FinnGen, the app crashed or showed "No Overlap". 
@@ -159,7 +163,7 @@ Note: As there was some memory loss, especially on UI settings, during conversat
 **Outcome:**
 I successfully restored the custom UI layout and integrated the robust ID matching logic derived from the diagnostic phase. Crucially, I resolved the convergence errors by explicitly passing the sample size ($N$) to the model and applying matrix regularization to handle the mismatched LD reference panel.
 
-
+---
 
 ## Phase 4: Performance Optimization 
 **The Problem:** The app was extremely slow when processing large genomic regions (5000+ SNPs). 
@@ -188,6 +192,8 @@ I resolved the column naming crash by implementing explicit name mapping instead
 ![step4](https://github.com/user-attachments/assets/e9cf8edc-89b6-4e82-a583-787ec5837b32)
 
 **Figure 4.** Matched & Speeded output for E4_LIPOPROT.1-54839974-55239974 in FinnGen. 
+
+---
 
 ## Phase 5: Final Polish & UI Refinement
 **Goal:** Align the user interface with professional standards.
@@ -224,6 +230,7 @@ I applied the final polish to the application by setting scientifically appropri
 
 **Figure 7.** Final SuSiE IBSS result: Data Vim & log
 
+---
 
 ## Conclusion & Best Practices
 Through this project, I learned that GenAI is not the Creator but a powerful accelerator that requires human guidance. It initially failed to handle the FinnGen ID mismatch and large data adaption, but once guided by clear diagnostic steps, it implemented complex solutions instantly.
@@ -243,6 +250,8 @@ Based on my development experience, here are the key takeaways for successfully 
     * If the AI gets stuck in an error loop (especially with data formatting), stop generation.
     * Manually inspect **intermediate values** (e.g., `print(head(data))`).
     * *Example:* In this project, the AI could not "guess" the FinnGen ID mismatch (`chr1_` vs `1_`). I had to manually diagnose the data structure first, then instruct the AI on the specific string manipulation required.
+
+---
 
 ## Possible Trouble shooting
 During the development with GenAI, you might encounter specific errors. Here is a log of common issues, their root causes, and example prompts used to fix them.
