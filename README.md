@@ -6,7 +6,7 @@ A Shiny application to visualize the iterative process of the SuSiE fine-mapping
 
 ## 🔗 Links
 * **Live Web Application**: [Click here to open App](https://cyyyyy.shinyapps.io/publish/)
-* **GenAI Tutorial**: [Read my GenAI Experience here](https://https://winder01.github.io./615-susieR-iterative-IBSS/GenAI_Tutorial/GenAI_Tutorial.html)
+* **GenAI Tutorial**: [Read my GenAI Experience here](https://winder01.github.io./615-susieR-iterative-IBSS/GenAI_Tutorial/GenAI_Tutorial.html)
 
 ## 📂 Repository Structure
 
