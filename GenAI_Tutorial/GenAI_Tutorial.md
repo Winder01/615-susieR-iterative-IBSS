@@ -221,6 +221,7 @@ I applied the final polish to the application by setting scientifically appropri
 <p align="center">
   <img src="https://github.com/user-attachments/assets/14105d6f-8dfa-4b72-a0c1-7fe8d3d3daaf" 
        width="950" 
+       style="height: auto; max-width: 100%;"
        alt="Final SuSiE IBSS result: PIP plot - High Resolution">
   <br>
   <em>Figure 5. Final SuSiE IBSS result: PIP plot</em>
@@ -229,6 +230,7 @@ I applied the final polish to the application by setting scientifically appropri
 <p align="center">
   <img src="https://github.com/user-attachments/assets/8fb274f2-29c9-4341-b4b4-3f5b8310b0bc" 
        width="950" 
+       style="height: auto; max-width: 100%;"
        alt="Final SuSiE IBSS result: Credible Sets Table - High Resolution">
   <br>
   <em>Figure 6. Final SuSiE IBSS result: Credible Sets Table</em>
@@ -237,6 +239,7 @@ I applied the final polish to the application by setting scientifically appropri
 <p align="center">
   <img src="https://github.com/user-attachments/assets/7f8dd15c-f9da-4c44-9202-9b9cc54b1a31" 
        width="700" 
+       style="height: auto; max-width: 100%;"
        alt="Final SuSiE IBSS result: Data Preview and Analysis Log - High Resolution">
   <br>
   <em>Figure 7. Final SuSiE IBSS result: Data Preview and Log</em>
