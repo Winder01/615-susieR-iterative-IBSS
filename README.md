@@ -10,6 +10,6 @@ A Shiny application to visualize the iterative process of the SuSiE fine-mapping
 
 ## 📂 Repository Structure
 * `app.R`: Main Shiny application code.
-* `data/`: Example datasets from FinnGen and generated examples (in txt file).
+* `data/`: Example datasets from FinnGen and generated text examples.
 * `GenAI_Tutorial/`: Documentation of how GenAI tools were used.
 * `scripts/`: Utilities for data preprocessing. 
