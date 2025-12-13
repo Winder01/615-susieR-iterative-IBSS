@@ -109,7 +109,7 @@ ui <- fluidPage(
       
       div(style="background: #f5f5f5; padding: 10px; border-radius: 5px;",
           h5("Visualization Control"),
-          uiOutput("iteratin_slider_ui"),
+          uiOutput("iteration_slider_ui"),
           actionButton("next_step", "Next Step", width = "100%"),
           div(style="text-align: center; margin-top: 5px;", textOutput("iteration_info"))
       )
