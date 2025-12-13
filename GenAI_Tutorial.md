@@ -1,9 +1,25 @@
 # GenAI Tutorial: Building the SuSiE Iterative Visualizer
+
 **Project:** Interactive Visualization of SuSiE Fine-Mapping
 
 **Author:** Catherine Yan
 
 **Tools:** RShiny, Plotly, Google Gemini 3 (LLM)
+
+---
+
+## 💻 Quick Navigation
+
+* [Phase 1: App Structure establishment (UI & Iterative algorithm)](#phase-1-app-structure-establishment-ui--iterative-algorithm)
+* [Phase 2: Simulating Genetic data](#phase-2-simulating-genetic-data)
+* [Phase 3: The Challenge - Integrating Real-World Data (FinnGen)](#phase-3-the-challenge---integrating-real-world-data-finngen)
+* [Phase 4: Performance Optimization](#phase-4-performance-optimization)
+* [Phase 5: Final Polish & UI Refinement](#phase-5-final-polish--ui-refinement)
+* [Conclusion & Best Practices](#conclusion--best-practices)
+* [Possible Trouble shooting](#possible-trouble-shooting)
+
+---
+
 
 ## Introduction
 This tutorial documents the development process of an RShiny application designed to visualize the Iterative Bayesian Stepwise Selection (IBSS) process of the SuSiE algorithm.
